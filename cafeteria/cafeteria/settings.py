@@ -134,3 +134,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # MEDIA CONFIG
 MEDIA__URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# CKeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    }
+}
