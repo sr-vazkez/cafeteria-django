@@ -14,6 +14,6 @@ def contact(request):
             email = request.POST.get('email', '')
             content = request.POST.get('content', '')
             # Si todo va bien direccionamos
-            return redirect(reverse('contact')+"?ok")
+            return redirect(reverse('contact/')+"?ok")
 
     return render(request, "contact/contact.html", {'form': contact_form})
