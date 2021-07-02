@@ -26,9 +26,11 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     # Rutas Page
     path('page/', include('pages.urls')),
-
+    # Rutas del contatc
+    path('contact/', include('contact.urls')),
     # Rutas del admin
     path('admin/', admin.site.urls),
+
 ]
 if settings.DEBUG:
     from django.conf.urls.static import static
