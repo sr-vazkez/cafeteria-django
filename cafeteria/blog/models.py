@@ -28,7 +28,8 @@ class Post(models.Model):
                               upload_to="blog", null=True, blank=True)
     author = models.ForeignKey(
         User, verbose_name="Autor", on_delete=models.CASCADE)
-    categories = models.ManyToManyField(Category, verbose_name="Categorias")
+    categories = models.ManyToManyField(
+        Category, verbose_name="Categorias", related_name="get_posts")
     created = models.DateField(
         auto_now_add=True, verbose_name="Fecha de creacion")
     updated = models.DateField(auto_now=True, verbose_name="Fecha de Edicion")
