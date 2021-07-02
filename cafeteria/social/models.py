@@ -5,7 +5,7 @@ from django.db.models.expressions import OrderBy
 
 
 class Link(models.Model):
-    key = models.SlugField(verbose_name="Nombre Calve",
+    key = models.SlugField(verbose_name="Nombre Clave",
                            max_length=100, unique=True)
     name = models.CharField(verbose_name="Red Social", max_length=200)
     url = models.URLField(verbose_name="Enlace",
