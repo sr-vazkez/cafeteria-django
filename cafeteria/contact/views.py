@@ -26,10 +26,10 @@ def contact(request):
             try:
                 # todo slio perron
                 email.send()
-                return redirect(reverse('contact/')+"?ok")
+                return redirect(reverse('contact')+"?ok")
 
             except:
                 # Algo no ha ido bien, redireccionamos a FAIL
-                return redirect(reverse('contact/')+"?fail")
+                return redirect(reverse('contact')+"?fail")
 
     return render(request, "contact/contact.html", {'form': contact_form})
